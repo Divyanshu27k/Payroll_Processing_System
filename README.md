@@ -17,7 +17,7 @@ Setup Instructions
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/yourusername/payroll-processing-system.git
+git clone https://github.com/divyanshu27k/payroll-processing-system.git
 Configure MySQL database in application.properties.
 Run the application using your IDE or the terminal:
 bash
