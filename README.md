@@ -1,54 +1,52 @@
-Payroll Processing System
-Project Overview
-This Payroll Processing System calculates employee salaries, applies tax deductions, and generates pay stubs.
-It demonstrates skills in financial calculations, data processing, and report generation using Java Spring Boot, Spring ORM, and MySQL in an MVC architecture.
+# 💼 Payroll Processing System
 
-Features
-Employee management (CRUD operations)
-Salary calculation with tax deductions
-Generate pay stubs
-Database integration (MySQL)
-Technologies Used
-Java Spring Boot
-Spring ORM
-MySQL
-JPA for persistence
-Setup Instructions
-Clone the repository:
-bash
-Copy code
+A robust Payroll Processing System built using Spring Boot and MySQL that automates employee salary calculations, tax deductions, and pay stub generation. This project demonstrates strong backend development skills, financial logic implementation, and MVC architecture design.
+
+---
+
+## 🚀 Features
+
+- 👨‍💼 Employee Management (Create, Read, Update, Delete)
+- 💰 Automated Salary Calculation
+- 📊 Tax Deduction Processing
+- 🧾 Pay Stub Generation
+- 🗄️ MySQL Database Integration
+- ⚡ Scalable MVC-based Architecture
+
+---
+
+## 🛠️ Technologies Used
+
+- Java
+- Spring Boot
+- Spring ORM / JPA (Hibernate)
+- MySQL
+- RESTful APIs
+
+---
+
+## 📂 Project Architecture
+
+This project follows **MVC (Model-View-Controller)** architecture:
+
+- **Model:** Entity classes for Employee, Salary, and Tax  
+- **View:** API responses (JSON-based)  
+- **Controller:** REST endpoints for handling requests  
+- **Service Layer:** Business logic for salary and tax calculations  
+
+---
+
+## 🔒 Key Highlights
+
+- Designed efficient salary calculation logic with dynamic tax handling  
+- Clean separation of concerns using layered architecture  
+- Optimized database interactions using JPA  
+- Scalable backend structure suitable for enterprise applications  
+
+---
+
+## ▶️ Setup Instructions
+
+### 1. Clone the Repository
+```bash
 git clone https://github.com/divyanshu27k/payroll-processing-system.git
-Configure MySQL database in application.properties.
-Run the application using your IDE or the terminal:
-bash
-Copy code
-mvn spring-boot:run
-Database Tables
-sql
-Copy code
-CREATE TABLE Employee (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    role VARCHAR(50),
-    department VARCHAR(50)
-);
-
-CREATE TABLE Salary (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    employee_id INT,
-    gross_salary DECIMAL(10,2),
-    tax DECIMAL(10,2),
-    net_salary DECIMAL(10,2),
-    FOREIGN KEY (employee_id) REFERENCES Employee(id)
-);
-
-CREATE TABLE Tax (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    tax_rate DECIMAL(4,2)
-);
-Usage
-Access the employee and salary endpoints via:
-/employees (GET, POST, PUT, DELETE)
-/salaries (GET, POST)
-License
-MIT License.
